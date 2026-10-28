@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import TaskCard from "./components/TaskCard";
+import Counter from "./components/Counter";
 
 function App(){
 
@@ -9,7 +10,8 @@ function App(){
       <main className="mx-auto max-w-xl p-6 space-y-3 p-6">
       <TaskCard title="Learn React" due = "Friday"/>
       <TaskCard title="Push to GitHub" due = "Today"/>
-      <TaskCard title="study Spring Boot" due = "Next Month"/>
+      <TaskCard title="Study Spring Boot" due = "Next Month"/>
+      <Counter/>
       </main>
     </div>
   );
