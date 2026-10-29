@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Header from "./components/Header";
 import TaskCard from "./components/TaskCard";
 import Counter from "./components/Counter";
@@ -10,6 +10,10 @@ function App(){
                                     {id:2,title:'Push to GitHub',due:'Today'},
                                     {id:3,title:'Study Spring Boot',due:'Next Month'},
   ]);
+
+  useEffect(() => {
+    document.title = `Tasks (${tasks.length})`
+  }, [tasks])
 
   function handleAdd(text){
     const newTask = {
